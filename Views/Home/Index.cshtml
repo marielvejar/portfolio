@@ -1,0 +1,16 @@
+﻿@model Persona
+@{
+    ViewData["Title"] = "Página Principal";
+    string ConvertirEnMayusculas(string valor)
+    {
+        return valor.ToUpper();
+    }
+}
+
+<div class="text-center">
+    <h1 class="display-4">Soy @ConvertirEnMayusculas(@Model.Nombre) (@Model.Edad)</h1>
+    <h2>Soy una desarrolladora full stack especializada en tecnologías .NET y Javascript</h2>
+    <img
+       id="foto"
+        src="~/imagenes/me.png" alt="Foto de Mariel" />
+</div>
