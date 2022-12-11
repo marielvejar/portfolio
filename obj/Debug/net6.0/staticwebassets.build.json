@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "schsWPhjOS0Y6HOxZpimLz6q6AKDZGenhdKJL1GKic4=",
+  "Hash": "RHCH570NYz70uP4zvPqGHV2netj3n5qAp3PxJvMnums=",
   "Source": "Portafolio",
   "BasePath": "_content/Portafolio",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\repos\\Portafolio\\Portafolio\\wwwroot\\imagenes\\bennu.png",
+      "SourceId": "Portafolio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\repos\\Portafolio\\Portafolio\\wwwroot\\",
+      "BasePath": "_content/Portafolio",
+      "RelativePath": "imagenes/bennu.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\bennu.png"
     },
     {
       "Identity": "C:\\repos\\Portafolio\\Portafolio\\wwwroot\\imagenes\\me.png",

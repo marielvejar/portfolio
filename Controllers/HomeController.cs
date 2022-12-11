@@ -1,26 +1,47 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portafolio.Models;
+using Portafolio.Servicios;
 using System.Diagnostics;
 
 namespace Portafolio.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<HomeController> _logger; 
+        private readonly IRepositorioProyectos repositorioProyectos;
+        private readonly ServicioDelimitado servicioDelimitado;
+        private readonly ServicioUnico servicioUnico;
+        private readonly ServicioTransitorio servicioTransitorio;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, 
+            IRepositorioProyectos repositorioProyectos,
+            ServicioDelimitado servicioDelimitado,
+            ServicioUnico servicioUnico,
+            ServicioTransitorio servicioTransitorio
+            )
         {
             _logger = logger;
+            this.repositorioProyectos = repositorioProyectos;
+            this.servicioDelimitado = servicioDelimitado;
+            this.servicioUnico = servicioUnico;
+            this.servicioTransitorio = servicioTransitorio;
         }
 
         public IActionResult Index()
         {
-            var persona = new Persona
+            var proyectos = repositorioProyectos.ObtenerProyectos().Take(1).ToList();
+            var guidViewModel = new EjemploGUIDViewModel()
             {
-                Nombre = "Mariel Véjar",
-                Edad = 20
+                Delimitado = servicioDelimitado.ObtenerGuid,
+                Transitorio = servicioTransitorio.ObtenerGuid,
+                Unico = servicioUnico.ObtenerGuid
             };
-            return View(persona);
+
+            var modelo = new HomeIndexViewModel() {
+                Proyectos = proyectos,
+                EjemploGUID_1 = guidViewModel
+            };
+            return View(modelo);
         }
         
         public IActionResult Privacy()

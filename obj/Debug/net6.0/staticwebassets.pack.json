@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\repos\\Portafolio\\Portafolio\\wwwroot\\imagenes\\bennu.png",
+      "PackagePath": "staticwebassets\\imagenes\\bennu.png"
+    },
+    {
       "Id": "C:\\repos\\Portafolio\\Portafolio\\wwwroot\\imagenes\\me.png",
       "PackagePath": "staticwebassets\\imagenes\\me.png"
     },
